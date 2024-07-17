@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@700&display=swap">
+    <title>Wedding Gift</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+            background-color: #d3d3d3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .container h1 {
+            font-family: 'Dancing Script', cursive; /* Menggunakan font Dancing Script */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .bank-info {
+            margin-bottom: 20px;
+        }
+        .bank-logo {
+            height: 60px; /* Ukuran gambar diperbesar */
+        }
+        .bank-account {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .bank-name {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .copy-button {
+            background-color: #6b6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .copy-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wedding Gift</h1>
+        
+        <div class="bank-info">
+            <img src="content/bca.png" alt="BCA Logo" class="bank-logo">
+            <div class="bank-account">1280304596</div>
+            <div class="bank-name">Syafira Nurlita</div>
+            <button class="copy-button" onclick="copyToClipboard('1280304596')">Salin Rekening</button>
+        </div>
+
+        <div class="bank-info">
+            <img src="content/mandiri.png" alt="Mandiri Logo" class="bank-logo">
+            <div class="bank-account">1240010740794</div>
+            <div class="bank-name">Syafira Nurlita</div>
+            <button class="copy-button" onclick="copyToClipboard('1240010740794')">Salin Rekening</button>
+        </div>
+
+        <div class="bank-info">
+            <img src="content/btpn.png" alt="BTPN Logo" class="bank-logo">
+            <div class="bank-account">90012917108</div>
+            <div class="bank-name">Syafira Nurlita</div>
+            <button class="copy-button" onclick="copyToClipboard('90012917108')">Salin Rekening</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Nomor rekening berhasil disalin: ' + text);
+            }, function(err) {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
